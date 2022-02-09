@@ -9,14 +9,14 @@ const Options = () => {
       style={{
         margin: 10,
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         alignItems: "center",
         flexDirection: "row",
-        width: "100%"
       }}
     >
-        <Option title={"Homes"} />
-        <Option title={"Prices"} />
+      <Option title={"Homes"} />
+      <Option title={"Land"} />
+      <Option title={"Apartments"} />
     </View>
   );
 };

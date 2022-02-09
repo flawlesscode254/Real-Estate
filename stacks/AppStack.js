@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import MainStack from "./MainStack";
+import MainStack from "./MainStack"
 import Details from "../screens/Details";
 
 const AppStack = () => {
@@ -9,7 +9,7 @@ const AppStack = () => {
     <Stack.Navigator screenOptions={{
         headerShown: false
     }}>
-      <Stack.Screen component={MainStack} name="Main" />
+      <Stack.Screen component={MainStack} name="MainStack" />
       <Stack.Screen component={Details} name="Details" />
     </Stack.Navigator>
   );

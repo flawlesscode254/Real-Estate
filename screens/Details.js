@@ -1,10 +1,17 @@
 import React from "react";
-import { View, Text, ImageBackground, ScrollView, Image } from "react-native";
+import {
+  View,
+  Text,
+  ImageBackground,
+  TouchableOpacity
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-import Photos from "../components/Photos";
+import BottomDetails from "../components/BottomDetails";
 
 const Details = () => {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -20,7 +27,24 @@ const Details = () => {
         source={{
           uri: "https://www.constructionkenya.com/wp-content/uploads/2017/12/Modern-Prefab-home.jpg",
         }}
-      ></ImageBackground>
+      >
+        <TouchableOpacity
+          onPress={() => {
+            navigation.goBack();
+          }}
+          style={{
+            backgroundColor: "yellow",
+            width: 35,
+            alignItems: "center",
+            justifyContent: "center",
+            margin: 10,
+            borderRadius: 999,
+            height: 35,
+          }}
+        >
+          <Ionicons color={"#000000"} name="arrow-back" size={27} />
+        </TouchableOpacity>
+      </ImageBackground>
       <View
         style={{
           backgroundColor: "#000000",
@@ -98,77 +122,7 @@ const Details = () => {
           </View>
         </View>
       </View>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "#FFFFFF",
-          borderTopLeftRadius: 25,
-          borderTopRightRadius: 25,
-        }}
-      >
-        <View
-          style={{
-            margin: 15,
-          }}
-        >
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 22,
-              letterSpacing: 1,
-            }}
-          >
-            Price
-          </Text>
-          <Text style={{
-              marginBottom: 20
-          }}>$24 per night</Text>
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 22,
-              letterSpacing: 1,
-            }}
-          >
-            Description
-          </Text>
-          <Text style={{
-              marginBottom: 20
-          }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing . Sapiente
-            reprehenderit nesciunt quis sit facere, eveniet est excepturi
-            adipisci nisi ipsam perspiciatis explicabo quas incidunt magni enim
-            voluptate corporis iure repellat!
-          </Text>
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 22,
-              letterSpacing: 1,
-              marginBottom: 10
-            }}
-          >
-            Photos
-          </Text>
-          <ScrollView horizontal>
-            <Photos 
-                url={"https://media.istockphoto.com/photos/beautiful-living-room-interior-with-hardwood-floors-and-and-view-of-picture-id1208205959?k=20&m=1208205959&s=612x612&w=0&h=bd4L_M7u2hPksL11njclcxgMWezFgSnKW1gBs9K-Xn0="}
-            />
-            <Photos 
-                url={"https://www.decoraid.com/wp-content/uploads/2018/07/Luxurious-interior-design-living-room-and-fireplace-in-a-beautiful-house-2500x1412.jpeg"}
-            />
-            <Photos 
-                url={"https://media-exp1.licdn.com/dms/image/C4E1BAQGzjeqz5bcWtg/company-background_10000/0/1600902984865?e=2159024400&v=beta&t=JA6jy5eCtCqmFrcF6uHX1k7O288srG6s2xDJgYW4cGM"}
-            />
-            <Photos 
-                url={"https://s3images.coroflot.com/user_files/individual_files/large_444208_m_hlsgxamutawrmhlrpqu2omb.jpg"}
-            />
-            <Photos 
-                url={"https://cdn.mos.cms.futurecdn.net/nVe3taWDVD8wnFbFYTLto7-768-80.jpg"}
-            />
-          </ScrollView>
-        </View>
-      </View>
+      <BottomDetails />
     </View>
   );
 };

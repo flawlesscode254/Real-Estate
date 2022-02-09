@@ -6,17 +6,16 @@ const Options = ({ title }) => {
     <View>
       <TouchableOpacity style={{
           marginHorizontal: 25,
-          borderWidth: 0.5,
-          width: 70,
+          width: 100,
           alignItems: "center",
           padding: 5,
-          borderColor: "#c2c4c3",
-          borderRadius: 4
+          borderRadius: 4,
+          backgroundColor: "#000000"
       }}>
           <Text style={{
               fontWeight: "bold",
               letterSpacing: 1,
-              color: "#0229c7"
+              color: "#FFFFFF"
           }}>{title}</Text>
       </TouchableOpacity>
     </View>
