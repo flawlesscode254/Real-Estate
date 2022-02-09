@@ -7,7 +7,7 @@ const Houses = () => {
   return (
     <ScrollView
       style={{
-        marginBottom: 150,
+        marginBottom: 140,
       }}
     >
       <Image

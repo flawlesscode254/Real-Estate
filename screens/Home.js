@@ -25,7 +25,9 @@ const Home = () => {
           Properties in Nairobi
         </Text>
       </View>
-      <ScrollView>
+      <ScrollView style={{
+          marginBottom: 80
+      }}>
         <Trending title={"Trending Homes"} />
         <Trending title={"Trending Lands"} />
         <Trending title={"Trending Apartments"} />
