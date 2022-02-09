@@ -11,7 +11,7 @@ const Title = () => {
           letterSpacing: 2,
           paddingLeft: 15,
           paddingTop: 10,
-          color: "#7a0035"
+          color: "#f00c45"
         }}
       >
         Qwako
