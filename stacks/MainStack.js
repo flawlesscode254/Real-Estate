@@ -6,6 +6,7 @@ import Main from "../screens/Main";
 import Home from "../screens/Home";
 import Favorites from "../screens/Favorites";
 import Account from "../screens/Account";
+import Cart from "../screens/Cart";
 
 const MainStack = () => {
   const Stack = createMaterialBottomTabNavigator();
@@ -36,6 +37,9 @@ const MainStack = () => {
         case "Account":
           iconName = "person";
           break;
+        case "Cart":
+          iconName = "cart";
+          break;
         default:
           iconName = "home";
       }
@@ -61,6 +65,7 @@ const MainStack = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Search" component={Main} />
       <Stack.Screen name="Favorites" component={Favorites} />
+      <Stack.Screen name="Cart" component={Cart} />
       <Stack.Screen name="Account" component={Account} />
     </Stack.Navigator>
   );
